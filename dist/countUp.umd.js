@@ -162,7 +162,9 @@
             if (!self || !window)
                 return;
             var bottomOfScroll = window.innerHeight + window.scrollY;
-            var bottomOfEl = self.el.offsetTop + self.el.offsetHeight;
+            // var bottomOfEl = self.el.offsetTop + self.el.offsetHeight;
+            var rect = self.el.getBoundingClientRect();
+            var bottomOfEl = rect.top + rect.height + window.pageYOffset;
             if (bottomOfEl < bottomOfScroll && bottomOfEl > window.scrollY && self.paused) {
                 // in view
                 self.paused = false;
