@@ -164,7 +164,7 @@ var CountUp = /** @class */ (function () {
         }
         else if (window.scrollY > bottomOfEl && !self.paused) {
             // scrolled past
-            self.reset();
+            // self.reset();
         }
     };
     // determines where easing starts and whether to count down or up
